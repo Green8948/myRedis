@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <classPathEntry location="D:\maven\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/>
+
+
+    <context id="context1">
+        <!-- �Ƿ�����ע�� -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- ���ݿ����� -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3304/database119"
+                        userId="root" password="root" />
+
+        <!-- ���ɵİ����͹����� -->
+        <javaModelGenerator targetPackage="cn.boyue.entity"
+                            targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="cn.boyue.mapping"
+                         targetProject="src/main/java" />
+        <javaClientGenerator targetPackage="cn.boyue.dao"
+                             targetProject="src/main/java" type="XMLMAPPER" />
+
+        <!-- ���ݿ�� -->
+        <table  tableName="user" domainObjectName="User">
+            <!-- ���ñ��� -->
+            <!--
+            <columnOverride column="id" property="dsId" />
+            <columnOverride column="username" property="dsName" />
+            <columnOverride column="sex" property="dtName" />
+            <columnOverride column="address" property="loginName" />
+            <columnOverride column="birthy" property="loginPwd" />
+             -->
+        </table>
+    </context>
+</generatorConfiguration>
+
+
